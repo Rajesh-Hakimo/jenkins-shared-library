@@ -6,7 +6,7 @@ class Parallel implements Serializable {
     }
 
     def exec(String[] names) {
-        names.each { name ->
+        for(String name in names) {
             parallel {
                 pipeline {
                     agent any
