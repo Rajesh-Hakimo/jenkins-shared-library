@@ -7,7 +7,6 @@ class Parallel implements Serializable {
 
     def exec(String[] names) {
         for(String name in names) {
-            parallel {
                 pipeline {
                     agent any
                     stages {
@@ -18,7 +17,6 @@ class Parallel implements Serializable {
                         }
                     }
                 }
-            }
         }
     }
 }
