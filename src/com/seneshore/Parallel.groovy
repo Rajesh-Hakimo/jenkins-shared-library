@@ -1,6 +1,6 @@
 package com.seneshore
 
-Class Parallel implements Serializable {
+class Parallel implements Serializable {
     def call(Sting[] names) {
         return exec(names)
     }
