@@ -6,7 +6,7 @@ Optionally you may also pin it to specific version like
 The _ (underscore) at the end denotes that we would like to import
 all the Globals under `var` directory.
 */
-@Library("shared-lib") _
+@Library("shared-lib@hakimo-test") _
 
 // Import the library
 import com.seneshore.Hello
