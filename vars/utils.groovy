@@ -26,3 +26,9 @@ def ping(String host) {
     def cmd = "ping -c 3 " + host 
     sh cmd
 }
+
+def generateRandomNumber(range) {
+	def random = new Random()
+  	def randomNumber = random.nextInt(range) // Generates a number between 0 and 99
+  	return randomNumber
+}
