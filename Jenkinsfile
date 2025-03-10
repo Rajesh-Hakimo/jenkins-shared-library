@@ -34,6 +34,14 @@ pipeline {
                 }
             }
         }
+        stage("print random number") {
+            steps {
+                script {
+                    def randomNumber = utils.generateRandomNumber(50)
+                    println randomNumber
+                }
+            }
+        }            
         stage("Hello") {
             steps {
                 script {
