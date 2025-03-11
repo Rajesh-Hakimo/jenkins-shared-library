@@ -36,19 +36,19 @@ def generateYaml(params) {
     return """
 cloud:
   hosts:
-    ${params.Tenant_ID}:
+    ${parameters.Tenant_ID}:
       ansible_host: localhost
       ansible_connection: local
-      tenant_name: "${params.Tenant_Name}"
-      tenant_id: "${params.Tenant_ID}"
-      tenant_namespace: "motion-${params.Tenant_ID}"
-      tenant_folder: "motion_${params.Tenant_ID}"
+      tenant_name: "${parameters.Tenant_Name}"
+      tenant_id: "${parameters.Tenant_ID}"
+      tenant_namespace: "motion-${parameters.Tenant_ID}"
+      tenant_folder: "motion_${parameters.Tenant_ID}"
       location:
-        name: "${params.Location_Name}"
-        country: "${params.Location_Country}"
-        state: "${params.Location_State}"
-        city: "${params.Location_City}"
-        timezone: "${params.Location_Timezone}"
-        description: "${params.Location_Name}, ${params.Location_City}, ${params.Location_State}, ${params.Location_Country}"
+        name: "${parameters.Location_Name}"
+        country: "${parameters.Location_Country}"
+        state: "${parameters.Location_State}"
+        city: "${parameters.Location_City}"
+        timezone: "${parameters.Location_Timezone}"
+        description: "${parameters.Location_Description"
 """
 }
