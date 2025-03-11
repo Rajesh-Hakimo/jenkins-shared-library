@@ -32,7 +32,7 @@ def generateRandomNumber(range) {
   	def randomNumber = random.nextInt(range) // Generates a number between 0 and 99
   	return randomNumber
 }
-def generateYaml(params) {
+def generateYaml(parameters) {
     return """
 cloud:
   hosts:
