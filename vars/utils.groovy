@@ -32,3 +32,23 @@ def generateRandomNumber(range) {
   	def randomNumber = random.nextInt(range) // Generates a number between 0 and 99
   	return randomNumber
 }
+def generateYaml(params) {
+    return """
+cloud:
+  hosts:
+    ${params.Tenant_ID}:
+      ansible_host: localhost
+      ansible_connection: local
+      tenant_name: "${params.Tenant_Name}"
+      tenant_id: "${params.Tenant_ID}"
+      tenant_namespace: "motion-${params.Tenant_ID}"
+      tenant_folder: "motion_${params.Tenant_ID}"
+      location:
+        name: "${params.Location_Name}"
+        country: "${params.Location_Country}"
+        state: "${params.Location_State}"
+        city: "${params.Location_City}"
+        timezone: "${params.Location_Timezone}"
+        description: "${params.Location_Name}, ${params.Location_City}, ${params.Location_State}, ${params.Location_Country}"
+"""
+}
